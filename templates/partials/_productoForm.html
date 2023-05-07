@@ -1,0 +1,53 @@
+<form action="/new" method="POST" class="card bg-black text-light">
+    <div class="card-body p-4">
+        <h1 class="h5 mb-4">Agregar Producto🛒</h1>
+        <div class="mb-3">
+            <label for="nombreProducto">Nombre del Producto</label>
+            <input 
+                type="text" 
+                name="nombreProducto" 
+                class="form-control rounded-2 border-0" 
+                placeholder="Escribe el nombre del producto"
+                autofocus
+            />
+        </div>
+    
+
+        <div class="mb-3">
+            <label for="precio">Precio del producto</label>
+            <input 
+                type="text" 
+                name="precio" 
+                placeholder="Escribe el precio del producto" 
+                class="form-control rounded-2 border-0"
+                required
+            />
+            
+        </div>
+
+        <div class="mb-3">
+            <label for="marca">Marca del producto</label>
+            <input 
+                type="text" 
+                name="marca" 
+                placeholder="Escribe la marca del producto" 
+                class="form-control rounded-2 border-0" 
+                required
+            />
+        </div>
+    
+        <div class="mb-3">
+            <label for="descripcion">Descripcion del producto</label>
+            <input 
+                type="text" 
+                name="descripcion" 
+                placeholder="Describe el producto"
+                class="form-control rounded-2 border-0"
+                required
+            />
+        </div>
+    </div>
+    <button class="btn btn-primary">
+        Guardar
+    </button>
+</form> 

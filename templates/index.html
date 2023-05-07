@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-5">
+        {% include 'partials/_message.html' %}
+
+        {% include 'partials/_productoForm.html' %}
+    </div>
+    <div class="col-md-7">
+
+        {% for producto in productos %}
+        <div class="card mb-1 text-white bg-black">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <h5>{{producto.nombreProducto}}</h5>
+                    <div>
+                        <a href="{{ url_for('productos.update_producto', id=producto.id) }}" class="btn btn-secondary btn-sm rounded=1 text-white" >Actualizar</a>
+                        <a href="{{ url_for('productos.delete_producto', id=producto.id) }}" class="btn btn-danger btn-sm rounded=1">Delete</a>
+                    </div>
+                </div>
+                <p>{{producto.precio}}</p>
+                <p>{{producto.marca}}</p>
+                <p>{{producto.descripcion}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

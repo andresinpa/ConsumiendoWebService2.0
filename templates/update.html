@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        
+<form action="/update/{{producto.id}}" method="POST" class="card bg-black text-white">
+    <div class="card-body p-4">
+        <div class="mb-3">
+            <label for="nombreProducto">Nombre del Producto</label>
+            <input 
+                type="text" 
+                name="nombreProducto" 
+                placeholder="Escribe el nombre del producto" 
+                value="{{producto.nombreProducto}}"
+                required
+            />
+        </div>
+    
+        <div class="mb-3">
+            <label for="precio">Precio del producto</label>
+            <input 
+                type="text" 
+                name="precio" 
+                placeholder="Escribe el precio del producto" 
+                value="{{producto.precio}}"
+                class="form-control rounded-2 border-0"
+                required
+            />
+            
+        </div>
+    
+        <div class="mb-3">
+            <label for="marca">Marca del producto</label>
+            <input 
+                type="text" 
+                name="marca" 
+                placeholder="Escribe la marca del producto" 
+                value="{{producto.marca}}"
+                class="form-control rounded-2 border-0" 
+                required
+            />
+        </div>
+    
+        <div class="mb-3">
+            <label for="descripcion">Descripcion del producto</label>
+            <input 
+                type="text" 
+                name="descripcion" 
+                placeholder="Describe el producto"
+                value="{{producto.descripcion}}"
+                class="form-control rounded-2 border-0"
+                required
+            />
+        </div>
+        
+        <button class="btn btn-secondary">
+            Actualizar
+        </button>
+    </div>
+</form> 
+    </div>
+</div>
+{% endblock %}
