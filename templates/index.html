@@ -16,7 +16,7 @@
                     <h5>{{producto.nombreProducto}}</h5>
                     <div>
                         <a href="{{ url_for('productos.update_producto', id=producto.id) }}" class="btn btn-secondary btn-sm rounded=1 text-white" >Actualizar</a>
-                        <a href="{{ url_for('productos.delete_producto', id=producto.id) }}" class="btn btn-danger btn-sm rounded=1">Delete</a>
+                        <a href="{{ url_for('productos.delete_producto', id=producto.id) }}" class="btn btn-danger btn-sm rounded=1">Eliminar</a>
                     </div>
                 </div>
                 <p>{{producto.precio}}</p>
