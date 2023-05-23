@@ -1,6 +1,7 @@
 from utils.db import db
 
 class Producto(db.Model):
+    #__tablename__ = 'producto'
     id = db.Column(db.Integer, primary_key=True)
     nombreProducto = db.Column(db.String(100))
     precio = db.Column(db.String(8))
